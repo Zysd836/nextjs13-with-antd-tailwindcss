@@ -18,7 +18,7 @@ export default function LocaleSwitcher() {
 					key: lang,
 					label: (
 						<Link href={pathname ?? '/'} locale={lang}>
-							{setting.flag}&nbsp;&nbsp;{setting.name}
+							{setting.flag} {setting.name}
 						</Link>
 					),
 				})),

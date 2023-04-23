@@ -6,7 +6,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 
 import ThemeProvider from '@/components/Providers';
 import { SiteHeader } from '@/components/SiteHeader';
-import '@/styles/globals.css';
+import '@/styles/globals.scss';
 
 import 'antd/dist/reset.css';
 
