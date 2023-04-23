@@ -12,6 +12,13 @@ const nextConfig = {
 		// Required:
 		appDir: true,
 	},
+	// routes
+	rewrites: async () => [
+		{
+			source: '/demo',
+			destination: '/demo'
+		}
+	]
 };
 
 module.exports = withNextIntl(nextConfig);

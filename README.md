@@ -1,4 +1,6 @@
 # Using Ant-Design 5 with Next.js 13 and Tailwind CSS
+# Github base
+https://github.com/hongfaqiu/nextjs13-with-antd-tailwindcss
 
 Antd is is an excellent UI component library, but there are some conflicts between the antdV5 and Next.js 13.
 This repository solved these problems, and you can use the template to start your project.
