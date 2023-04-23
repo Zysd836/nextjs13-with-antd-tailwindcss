@@ -1,16 +1,15 @@
 import { Locale } from 'antd/lib/locale';
 import en_US from 'antd/locale/en_US';
-import zh_CN from 'antd/locale/zh_CN';
+import vi_VN from 'antd/locale/vi_VN';
 import { getRequestConfig } from 'next-intl/server';
 
 export const languages = {
-	'zh-CN': {
-		name: '简体中文',
-		flag: '🇨🇳',
-		unicode: '1f1e8-1f1f3',
-		antd: zh_CN,
+	'vi-VN': {
+		name: 'Vietnamese',
+		flag: 'vn',
+		antd: vi_VN,
 	},
-	'en-US': { name: 'English', flag: '🇺🇸', unicode: '1f1fa-1f1f8', antd: en_US },
+	'en-US': { name: 'English', flag: '🇺🇸', antd: en_US },
 };
 
 export type ILanguage = {

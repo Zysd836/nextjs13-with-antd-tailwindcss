@@ -1,0 +1,14 @@
+{
+  "site": {
+    "title": "Next.js",
+		"desc": "Sử dụng Ant-Design 5 cùng Next.js 13 và Tailwind CSS"
+  },
+	"nav": {
+		"home": "Trang chủ"
+	},
+	"theme": {
+		"light": "sáng",
+		"dark": "tối",
+		"system": "hệ thống"
+	}
+}
