@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import { Quicksand } from 'next/font/google'
 import { notFound } from 'next/navigation'
 
 import { NextIntlClientProvider } from 'next-intl'
@@ -11,11 +10,6 @@ import { defaultLocale } from '@/i18n'
 import '@/styles/globals.scss'
 
 import 'antd/dist/reset.css'
-
-const quicksand = Quicksand({
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 export default async function RootLayout({
   children,
@@ -31,7 +25,7 @@ export default async function RootLayout({
     notFound()
   }
   return (
-    <html lang={locale ?? defaultLocale} className={quicksand.className}>
+    <html lang={locale ?? defaultLocale}>
       <head />
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
