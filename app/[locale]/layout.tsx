@@ -9,6 +9,14 @@ import { SiteHeader } from '@/components/SiteHeader';
 import '@/styles/globals.scss';
 
 import 'antd/dist/reset.css';
+import { defaultLocale } from '@/i18n';
+import { Quicksand } from 'next/font/google';
+
+const quicksand = Quicksand({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 
 export default async function RootLayout({
 	children,
@@ -24,7 +32,7 @@ export default async function RootLayout({
 		notFound();
 	}
 	return (
-		<html lang="zh">
+		<html lang={locale ?? defaultLocale} className={quicksand.className}>
 			<head />
 			<body>
 				<NextIntlClientProvider locale={locale} messages={messages}>
