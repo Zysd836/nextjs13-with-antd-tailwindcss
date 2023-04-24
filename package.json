@@ -23,6 +23,7 @@
 		"next-themes": "^0.2.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"sass": "^1.62.0",
 		"tailwind-merge": "^1.10.0"
 	},
 	"devDependencies": {
@@ -33,13 +34,13 @@
 		"@typescript-eslint/parser": "^4.9.1",
 		"autoprefixer": "^10.4.13",
 		"eslint": "7.32.0",
+		"eslint-config-airbnb": "^18.2.1",
 		"eslint-config-next": "13.1.6",
 		"eslint-config-prettier": "^8.6.0",
-		"eslint-plugin-tailwindcss": "^3.10.1",
-		"eslint-config-airbnb": "^18.2.1",
 		"eslint-plugin-prettier": "^3.4.0",
 		"eslint-plugin-react": "^7.23.2",
 		"eslint-plugin-react-hooks": "^4.2.0",
+		"eslint-plugin-tailwindcss": "^3.10.1",
 		"husky": "^8.0.3",
 		"lint-staged": "^13.2.1",
 		"postcss": "^8.4.21",
