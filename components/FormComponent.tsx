@@ -2,7 +2,6 @@
 
 import {
 	Button,
-	Cascader,
 	Checkbox,
 	DatePicker,
 	Form,
@@ -44,7 +43,7 @@ export default function FormComponent() {
 				</Upload>
 			</Form.Item>
 			<Form.Item label="Button">
-				<Button type='primary'>Button</Button>
+				<Button type="primary">Button</Button>
 			</Form.Item>
 		</Form>
 	);

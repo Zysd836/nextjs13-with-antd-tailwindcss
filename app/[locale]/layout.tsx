@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Quicksand } from 'next/font/google';
 import { notFound } from 'next/navigation';
 
 import { NextIntlClientProvider } from 'next-intl';
@@ -6,17 +7,15 @@ import { getLocale, getTranslations } from 'next-intl/server';
 
 import ThemeProvider from '@/components/Providers';
 import { SiteHeader } from '@/components/SiteHeader';
+import { defaultLocale } from '@/i18n';
 import '@/styles/globals.scss';
 
 import 'antd/dist/reset.css';
-import { defaultLocale } from '@/i18n';
-import { Quicksand } from 'next/font/google';
 
 const quicksand = Quicksand({
-  subsets: ['latin'],
-  display: 'swap',
-})
-
+	subsets: ['latin'],
+	display: 'swap',
+});
 
 export default async function RootLayout({
 	children,

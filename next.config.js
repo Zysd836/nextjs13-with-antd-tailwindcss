@@ -16,9 +16,9 @@ const nextConfig = {
 	rewrites: async () => [
 		{
 			source: '/demo',
-			destination: '/demo'
-		}
-	]
+			destination: '/demo',
+		},
+	],
 };
 
 module.exports = withNextIntl(nextConfig);

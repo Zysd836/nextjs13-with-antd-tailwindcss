@@ -3,8 +3,7 @@
 import { PropsWithChildren, useEffect, useState } from 'react';
 
 import { ConfigProvider, theme } from 'antd';
-import { ThemeProvider as NextThemeProvider } from 'next-themes';
-import { useTheme } from 'next-themes';
+import { ThemeProvider as NextThemeProvider, useTheme } from 'next-themes';
 
 import { defaultLocale, languages } from '@/i18n';
 
@@ -16,7 +15,7 @@ export type ProviderProps = PropsWithChildren<{
 
 export function AntdConfigProvider({ children, locale }: ProviderProps) {
 	const { theme: nowTheme } = useTheme();
-	
+
 	return (
 		<ConfigProvider
 			locale={(languages as any)[(locale as any) ?? defaultLocale].antd}
@@ -38,13 +37,9 @@ export default function Providers(props: ProviderProps) {
 		setMounted(true);
 	}, []);
 
-  if (!mounted) {
-    // use your loading page
-    return (
-      <div className="hidden">
-        {props.children}
-      </div>
-    );
+	if (!mounted) {
+		// use your loading page
+		return <div className="hidden">{props.children}</div>;
 	}
 
 	return (
