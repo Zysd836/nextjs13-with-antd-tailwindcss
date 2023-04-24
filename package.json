@@ -7,6 +7,8 @@
 		"dev": "next dev",
 		"start": "next start",
 		"postinstall": "husky install",
+		"lint": "eslint . --ext js,jsx,ts,tsx --fix",
+		"lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx ./pages ./src",
 		"format": "prettier --write \"**/*.{js,ts,tsx,mdx}\" --cache",
 		"check": "prettier --check \"**/*.{js,ts,tsx,mdx}\" --cache"
 	},
@@ -44,10 +46,5 @@
 			"npm run lint -- --quiet --fix",
 			"npm run format"
 		]
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
 	}
 }
