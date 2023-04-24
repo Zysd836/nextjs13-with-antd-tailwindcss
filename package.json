@@ -6,8 +6,7 @@
 		"build": "next build",
 		"dev": "next dev",
 		"start": "next start",
-		"lint": "eslint . --ext js,jsx,ts,tsx --fix",
-		"lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx",
+		"postinstall": "husky install",
 		"format": "prettier --write \"**/*.{js,ts,tsx,mdx}\" --cache",
 		"check": "prettier --check \"**/*.{js,ts,tsx,mdx}\" --cache"
 	},
@@ -42,7 +41,8 @@
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
-			"npm run lint -- --quiet --fix"
+			"npm run lint -- --quiet --fix",
+			"npm run format"
 		]
 	},
 	"husky": {

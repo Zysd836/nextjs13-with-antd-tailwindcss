@@ -21,7 +21,7 @@ export default function ThemeToggle() {
 			key: 'light',
 			label: (
 				<div className="flex items-center">
-					<Icons.SunMedium className="mr-2 h-5 w-5 text-orange-500" />
+					< className="mr-2 h-5 w-5 text-orange-500" />
 					<span>{t('light')}</span>
 				</div>
 			),
