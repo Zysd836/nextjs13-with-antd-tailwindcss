@@ -49,8 +49,7 @@
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": [
-			"npm run lint -- --quiet --fix",
-			"npm run format"
+			"npm run lint -- --quiet --fix"
 		]
 	}
 }
