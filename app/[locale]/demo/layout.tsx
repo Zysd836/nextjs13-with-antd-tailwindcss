@@ -6,7 +6,7 @@ type Props = {
 const DemoLayout: React.FC<Props> = ({ children }) => {
   return (
     <div>
-      <div>dasda</div>
+      <div>Lyout demo</div>
       {children}
     </div>
   )

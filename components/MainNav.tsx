@@ -22,6 +22,10 @@ export function MainNav() {
       title: t('nav.home'),
       href: '/',
     },
+    {
+      title: 'demo',
+      href: '/demo',
+    },
   ]
 
   return (
@@ -34,9 +38,10 @@ export function MainNav() {
           </span>
         </div>
       </Link>
-      {NavItems?.map(
-        (item, index) =>
-          item.href && (
+      <div className="hidden sm:flex sm:gap-3">
+        {NavItems?.map(
+          (item, index) =>
+            item.href && (
             <Link
               key={index}
               href={item.href}
@@ -44,8 +49,9 @@ export function MainNav() {
             >
               {item.title}
             </Link>
-          ),
-      )}
+            ),
+        )}
+      </div>
       <Dropdown
         menu={{
           items: NavItems?.map((item) => ({
@@ -54,7 +60,7 @@ export function MainNav() {
           })),
         }}
       >
-        <div className="btn md:hidden">
+        <div className="btn sm:hidden">
           <Icons.logo className="mr-2 h-4 w-4" />
           {' '}
           <span className="font-bold">Menu</span>

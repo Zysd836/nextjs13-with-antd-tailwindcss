@@ -2,7 +2,7 @@
 
 import { PropsWithChildren, useEffect, useState } from 'react'
 
-import { ConfigProvider, theme } from 'antd'
+import { ConfigProvider, Spin, theme } from 'antd'
 import { ThemeProvider as NextThemeProvider, useTheme } from 'next-themes'
 
 import { defaultLocale, languages } from '@/i18n'
@@ -39,7 +39,7 @@ export default function Providers(props: ProviderProps) {
 
   if (!mounted) {
     // use your loading page
-    return <div className="hidden">{props.children}</div>
+    return <div className="h-[100vh] w-full flex justify-center items-center bg-slate-300"><Spin /></div>
   }
 
   return (
