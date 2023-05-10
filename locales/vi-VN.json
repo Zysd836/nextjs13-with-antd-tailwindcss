@@ -10,5 +10,9 @@
 		"light": "sáng",
 		"dark": "tối",
 		"system": "hệ thống"
+	},
+	"error": {
+		"errorMess": "Something went wrong!",
+		"tryAgain": "Thử lại"
 	}
 }

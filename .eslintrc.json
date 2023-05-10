@@ -46,6 +46,7 @@
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/no-static-element-interactions": "off",
     "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/html-has-lang": "off",
     "no-unneeded-ternary": "off",
     "import/prefer-default-export": "off",
     "react/jsx-props-no-spreading": "off",

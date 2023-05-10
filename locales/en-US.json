@@ -10,5 +10,9 @@
 		"light": "light",
 		"dark": "dark",
 		"system": "system"
+	},
+	"error": {
+		"errorMess": "Something went wrong!",
+		"tryAgain": "Try again"
 	}
 }
