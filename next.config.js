@@ -5,6 +5,7 @@ const withNextIntl = require('next-intl/plugin')(
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	output: 'standalone',
 	reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
 	transpilePackages: ['antd'],
 	swcMinify: true,

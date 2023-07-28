@@ -12,5 +12,5 @@ export default createIntlMiddleware({
 
 export const config = {
   // Skip all paths that aren't pages that you'd like to internationalize
-  matcher: ['/((?!api|_next|favicon.ico|assets).*)'],
+  matcher: ['/((?!api|_next|favicon.ico|assets|robots.txt).*)'],
 }

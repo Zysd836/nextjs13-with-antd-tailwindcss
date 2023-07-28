@@ -1,8 +1,8 @@
 'use client'
 
-import { PropsWithChildren, useEffect, useState } from 'react'
+import { PropsWithChildren } from 'react'
 
-import { ConfigProvider, Spin, theme } from 'antd'
+import { ConfigProvider, theme } from 'antd'
 import { ThemeProvider as NextThemeProvider, useTheme } from 'next-themes'
 
 import { defaultLocale, languages } from '@/i18n'
@@ -18,6 +18,8 @@ export function AntdConfigProvider({ children, locale }: ProviderProps) {
 
   return (
     <ConfigProvider
+      prefixCls="ant"
+      iconPrefixCls="anticon"
       locale={(languages as any)[(locale as any) ?? defaultLocale].antd}
       theme={{
         algorithm:
@@ -30,17 +32,18 @@ export function AntdConfigProvider({ children, locale }: ProviderProps) {
 }
 
 export default function Providers(props: ProviderProps) {
-  const [mounted, setMounted] = useState(false)
+  // use code below can not prerender html
+  // const [mounted, setMounted] = useState(false)
 
-  // useEffect only runs on the client, so now we can safely show the UI
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  // // useEffect only runs on the client, so now we can safely show the UI
+  // useEffect(() => {
+  //   setMounted(true)
+  // }, [])
 
-  if (!mounted) {
-    // use your loading page
-    return <div className="h-[100vh] w-full flex justify-center items-center bg-slate-300"><Spin /></div>
-  }
+  // if (!mounted) {
+  //   // use your loading page
+  //   return <div className="h-[100vh] w-full flex justify-center items-center bg-slate-300"><Spin /></div>
+  // }
 
   return (
     <NextThemeProvider
