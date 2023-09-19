@@ -13,13 +13,13 @@ export const languages = {
 }
 
 export type ILanguage = {
-	[K in keyof typeof languages]: {
-		name: string;
-		flag: string;
-		unicode: string;
-		antd: Locale;
-	};
-};
+  [K in keyof typeof languages]: {
+    name: string
+    flag: string
+    unicode: string
+    antd: Locale
+  }
+}
 
 export const defaultLocale: keyof typeof languages = 'en-US'
 

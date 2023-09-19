@@ -1,12 +1,10 @@
 'use client'
 
-import React from 'react'
-
+import Icons from './Icons'
 import { Dropdown, MenuProps } from 'antd'
 import { useTranslations } from 'next-intl'
 import { useTheme } from 'next-themes'
-
-import Icons from './Icons'
+import React from 'react'
 
 export default function ThemeToggle() {
   const { setTheme, theme } = useTheme()

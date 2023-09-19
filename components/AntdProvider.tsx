@@ -1,12 +1,10 @@
 'use client'
 
-import React, { useState } from 'react'
-
-import { useServerInsertedHTML } from 'next/navigation'
-
 import { StyleProvider, createCache, extractStyle } from '@ant-design/cssinjs'
 import dayjs from 'dayjs'
 import 'dayjs/locale/vi'
+import { useServerInsertedHTML } from 'next/navigation'
+import React, { useState } from 'react'
 
 dayjs.locale('vi')
 
@@ -33,7 +31,10 @@ export function AntdProvider({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <StyleProvider hashPriority="high" cache={cache}>
+    <StyleProvider
+      hashPriority="high"
+      cache={cache}
+    >
       {render}
     </StyleProvider>
   )

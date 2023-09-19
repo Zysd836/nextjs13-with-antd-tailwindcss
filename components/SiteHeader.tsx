@@ -1,11 +1,9 @@
-import Link from 'next/link'
-
-import { siteConfig } from '@/config/site-config'
-
 import Icons from './Icons'
 import LocaleSwitcher from './LocaleSwitcher'
 import { MainNav } from './MainNav'
 import ThemeToggle from './ThemeToggle'
+import { siteConfig } from '@/config/site-config'
+import Link from 'next/link'
 
 export function SiteHeader() {
   return (
