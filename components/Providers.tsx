@@ -1,17 +1,14 @@
 'use client'
 
-import { PropsWithChildren } from 'react'
-
+import { AntdProvider } from './AntdProvider'
+import { defaultLocale, languages } from '@/i18n'
 import { ConfigProvider, theme } from 'antd'
 import { ThemeProvider as NextThemeProvider, useTheme } from 'next-themes'
-
-import { defaultLocale, languages } from '@/i18n'
-
-import { AntdProvider } from './AntdProvider'
+import { PropsWithChildren } from 'react'
 
 export type ProviderProps = PropsWithChildren<{
-  locale: string;
-}>;
+  locale: string
+}>
 
 export function AntdConfigProvider({ children, locale }: ProviderProps) {
   const { theme: nowTheme } = useTheme()
@@ -22,8 +19,7 @@ export function AntdConfigProvider({ children, locale }: ProviderProps) {
       iconPrefixCls="anticon"
       locale={(languages as any)[(locale as any) ?? defaultLocale].antd}
       theme={{
-        algorithm:
-          nowTheme === 'dark' ? theme.darkAlgorithm : theme.defaultAlgorithm,
+        algorithm: nowTheme === 'dark' ? theme.darkAlgorithm : theme.defaultAlgorithm,
       }}
     >
       <AntdProvider>{children}</AntdProvider>

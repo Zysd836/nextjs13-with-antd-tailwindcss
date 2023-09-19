@@ -2,13 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 
-export default function GlobalError({
-  error,
-  reset,
-}: {
-  error: Error;
-  reset: () => void;
-}) {
+export default function GlobalError({ error, reset }: { error: Error; reset: () => void }) {
   const t = useTranslations()
   return (
     <html lang={t('error.tryAgain')}>

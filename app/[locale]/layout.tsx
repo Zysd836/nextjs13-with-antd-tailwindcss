@@ -1,22 +1,19 @@
-import { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-
-import { NextIntlClientProvider } from 'next-intl'
-import { getLocale, getTranslations } from 'next-intl/server'
-
 import ThemeProvider from '@/components/Providers'
 import { SiteHeader } from '@/components/SiteHeader'
 import { defaultLocale } from '@/i18n'
 import '@/styles/globals.scss'
-
 import 'antd/dist/reset.css'
+import { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
+import { getLocale, getTranslations } from 'next-intl/server'
+import { notFound } from 'next/navigation'
 
 export default async function RootLayout({
   children,
   params: { locale },
 }: {
-	children: React.ReactNode;
-	params: Record<string, any>;
+  children: React.ReactNode
+  params: Record<string, any>
 }) {
   let messages
   try {
@@ -28,7 +25,10 @@ export default async function RootLayout({
     <html lang={locale ?? defaultLocale}>
       <head />
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider
+          locale={locale}
+          messages={messages}
+        >
           <ThemeProvider locale={locale}>
             <SiteHeader />
             <main>{children}</main>
